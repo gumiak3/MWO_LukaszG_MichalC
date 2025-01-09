@@ -1,0 +1,22 @@
+@startuml
+
+actor Użytkownik
+participant System
+
+Użytkownik -> System: Naciśnij na przycisk "Wybierz język"
+System -> Użytkownik: Wyświetl okno wyboru języka
+Użytkownik -> System: Naciśnij na flagę języka
+System -> Użytkownik
+
+newpage
+
+Użytkownik -> System: Naciśnij na przycisk "Wyświetl bilety"
+System -> Użytkownik: Wyświetl okno wyboru rodzaju biletu
+Użytkownik -> System: Wybierz rodzaj biletu i naciśnij przycisk "Kup bilet"
+System -> Użytkownik: Wyświetl okno płatności
+Użytkownik -> System: Wybierz rodzaj płatności
+System -> Użytkownik: Wyświetl okno płatności
+Użytkownik -> System: Zapłać za bilet
+System -> Użytkownik: Wyświetl potwierdzenie zakupu
+
+@enduml
