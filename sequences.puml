@@ -19,4 +19,47 @@ System -> Użytkownik: Wyświetl okno płatności
 Użytkownik -> System: Zapłać za bilet
 System -> Użytkownik: Wyświetl potwierdzenie zakupu
 
+newpage 
+
+actor Administrator
+participant System
+
+Administrator -> System: wybierz "wyświetl raporty sprzedaży"
+System -> Administrator: wyświetl okno raportów sprzedaży
+
+newpage
+
+
+Administrator -> System: wybierz "wyświetl dostępne bilety"
+System -> Administrator: wyświetl dostępne bilety
+Administrator -> System: wybierz "Skonfiguruj bilet"
+System -> Administrator: wyświetl okno konfiguracji biletu
+Administrator -> System: konfiguruj bilet
+System -> Administrator
+
+newpage
+
+Administrator -> System: wybierz "wyświetl dostępne promocje"
+System -> Administrator: wyświetl dostępne promocje
+Administrator -> System: wybierz "Skonfiguruj promocję"
+System -> Administrator: wyświetl okno konfiguracji promocji
+Administrator -> System: konfiguruj promocję
+System -> Administrator
+newpage
+
+Administrator -> System: wybierz "wyświetl dostępne taryfy"
+System -> Administrator: wyświetl dostępne taryfy
+Administrator -> System: wybierz "Skonfiguruj taryfę"
+System -> Administrator: wyświetl okno konfiguracji taryfy
+Administrator -> System: konfiguruj taryfę
+System -> Administrator
+
+newpage
+
+Administrator -> System: wybierz "wyświetl listę biletomatów"
+System -> Administrator: wyświetl listę biletomatów
+Administrator -> System: wybierz "Zaktualizuj biletomat"
+System -> System: zaktualizuj biletomat
+System -> Administrator
+
 @enduml
