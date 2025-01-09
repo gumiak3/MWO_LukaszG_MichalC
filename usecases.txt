@@ -1,0 +1,17 @@
+@startuml
+actor "Administrator" as (Administrator)
+
+(Administrator) --> (Wyświetlić listę biletomatów)
+
+(Wyświetlić listę biletomatów) --> (Zaktualizować zdalnie oprogramowanie biletomatu)
+
+(Administrator) --> (Wyświetlić raporty sprzedaży)
+(Administrator) --> (Wyświetlić dostępne bilety)
+(Administrator) --> (Wyświetlić dostępne promocję)
+(Administrator) --> (Wyświetlić dostępne taryfy)
+
+(Wyświetlić dostępne bilety) --> (Konfigurować bilet)
+(Wyświetlić dostępne promocję) --> (Konfigurować promocję)
+(Wyświetlić dostępne taryfy) --> (Konfigurować taryfę)
+
+@enduml
