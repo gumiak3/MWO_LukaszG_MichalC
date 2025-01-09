@@ -1,5 +1,6 @@
 @startuml
-actor "Administrator" as (Administrator)
+
+actor "Administrator" as Administrator
 
 (Administrator) --> (Wyświetlić listę biletomatów)
 
@@ -13,5 +14,12 @@ actor "Administrator" as (Administrator)
 (Wyświetlić dostępne bilety) --> (Konfigurować bilet)
 (Wyświetlić dostępne promocję) --> (Konfigurować promocję)
 (Wyświetlić dostępne taryfy) --> (Konfigurować taryfę)
+
+actor Użytkownik as Użytkownik
+
+(Użytkownik) --> (Wyświetlić dostępne rodzaje biletów)
+(Użytkownik) --> (Wybrać język)
+
+(Wyświetlić dostępne rodzaje biletów) --> (Kupić bilet)
 
 @enduml
