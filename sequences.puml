@@ -11,12 +11,18 @@ System -> Użytkownik
 newpage
 
 Użytkownik -> System: Naciśnij na przycisk "Wyświetl bilety"
+System -> System: Pobierz ceny biletów
 System -> Użytkownik: Wyświetl okno wyboru rodzaju biletu
-Użytkownik -> System: Wybierz rodzaj biletu i naciśnij przycisk "Kup bilet"
-System -> Użytkownik: Wyświetl okno płatności
+Użytkownik -> System: Wybierz rodzaj biletu i ilość biletów i naciśnij przycisk "Kup bilet"
+System -> Użytkownik: Wyświetl okno potwierdzenia płatności
+Użytkownik -> System: Potwierdz
+System -> Użytkownik: Wyświetl okno rodzaju płatności
 Użytkownik -> System: Wybierz rodzaj płatności
 System -> Użytkownik: Wyświetl okno płatności
 Użytkownik -> System: Zapłać za bilet
+System -> System: Wyślij raport transakcji
+System -> System: Drukuj bilety
+System -> System: Wydaj resztę
 System -> Użytkownik: Wyświetl potwierdzenie zakupu
 
 newpage 
