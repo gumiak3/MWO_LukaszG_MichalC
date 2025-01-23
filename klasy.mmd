@@ -1,0 +1,74 @@
+classDiagram
+
+namespace View {
+    class VOknoGlowne {
+        +void nacisnietoPrzyciskWyswietlBilety()
+    }
+
+    class VOknoRodzajuBiletu {
+        +void wybranoRodzaj(String)
+        +void wybranoIloscBiletow(int)
+        +void nacisnietoPrzyciskKupBilety()
+    }
+
+    class VOknoPotwierdzeniaPlatnosci {
+        +void nacisnietoPrzyciskPotwierdz()
+    }
+
+    class VOknoRodzajuPlatnosci {
+        +void wybranoRodzaj()
+        +void nacisnietoZaplac()
+    }
+}
+
+namespace Controller {
+    class COknoGlowne {
+        +void wyswietlBilety()
+    }
+
+    class COknoRodzajuBiletu {
+        +void wybierzRodzaj(String)
+        +void wybierzIloscBiletow(int)
+        +void kupBilety()
+    }
+
+    class COknoPotwierdzeniaPlatnosci {
+        +void potwierdz()
+    }
+
+    class COknoRodzajuPlatnosci {
+        +void wybierzRodzaj(String)
+        +void zaplac(XDaneTransakcji)
+        +void drukuj(MBilet[])
+        +void wydajReszte()
+        +void wyswieltPotwierdzenieZakupu()
+    }
+}
+
+namespace Model {
+    class MBilety {
+        +MBilet[] pobierzCeny()
+        +float obliczKoszty(String,int)
+        +XRaportTransakcji zaplac(XDaneTransakcji)
+        +void wyslijRaportTransakcji(XRaportTransakcji)
+    }
+
+    class MBilet {
+        +float cena
+        +String rodzaj
+    }
+}
+
+VOknoGlowne --> COknoGlowne
+VOknoPotwierdzeniaPlatnosci --> COknoPotwierdzeniaPlatnosci
+VOknoRodzajuBiletu --> COknoRodzajuBiletu
+VOknoRodzajuPlatnosci --> COknoRodzajuPlatnosci
+
+COknoGlowne --> VOknoRodzajuBiletu
+COknoRodzajuBiletu --> VOknoRodzajuPlatnosci
+COknoRodzajuPlatnosci --> VOknoPotwierdzeniaPlatnosci
+
+COknoGlowne --> MBilety
+COknoRodzajuBiletu --> MBilety
+COknoPotwierdzeniaPlatnosci --> MBilety
+COknoRodzajuPlatnosci --> MBilety
